@@ -1,4 +1,4 @@
-# MetoHash: A Memory-Efficient and Traffic-Optimized Hashing Index on Hybrid PMem-DRAM Memories {#title-id}
+# MetoHash: A Memory-Efficient and Traffic-Optimized Hashing Index on Hybrid PMem-DRAM Memories
 
 This is the implementation repository of our SC'25 paper: MetoHash: A Memory-Efficient and Traffic-Optimized Hashing Index on Hybrid PMem-DRAM Memories.
 This artifact provides the source code of MetoHash and scripts to reproduce all the experiment results in our paper.
@@ -88,9 +88,39 @@ While running scripts directly works well for testing MetoHash in isolation, it 
 
 **To address this, we offer reviewers a one-click solution below that automates the entire process: it runs all benchmarks, collects the resulting data, and generates the reproduction figures.**
 
-XXX???
 
 
+To all AE Reviewers: Before reproduce experiment results, please make sure that your working directory is under `/home/scae/sc` and conduct following steps as root using `sudo -s`. Meanwhile, due to the **limited execution time(8 hours)** of AE, we 1)only perform the result of uniform distribution in Exp#1 and Exp#2; 2)evaluate all indexes exclude Level and CLevel, because both of them take too much time to get the evaluation result; 3) only evaluate the result where thread number is increased from 8 to 24 in Exp#1, Exp#2 and Exp#4. We also provide a optional python script(`scripts/clean_data_cache.py`) to remove all the previous resulting data and experiment figures before you start to reproduce all the results.
+
+### Exp#1 - Figure 10 (~1 hour)
+
+1. Do `cd scripts/`
+2. Do `sudo python3 ex1_fig10.py`
+3. After the experiment is finished, this will generate `ex1_fig10.png` in `output/` folder, and the resulting data is in `../data/ex1` folder.
+
+### Exp#2 - Figure 11 (~4 hours)
+
+1. Do `cd scripts/`
+2. Do `sudo python3 ex2_fig11.py`
+3. After the experiment is finished, this will generate `ex2_fig11.png` in `output/` folder, and the resulting data is in `../data/ex2/` folder.
+
+### Exp#4 - Figure 13 (~5 min)
+
+1. Do `cd scripts/`
+2. Do `sudo python3 ex4_fig13.py`
+3. After the experiment is finished, this will generate `ex4_fig13.png` in `output/` folder, and the resulting data is in `../data/ex4/` folder.
+
+### Exp#5 - Figure 14 (~30 min)
+
+1. Do `cd scripts/`
+2. Do `sudo python3 ex5_fig14.py`
+3. After the experiment is finished, this will generate `ex5_fig14.png` in `output/` folder, and the resulting data is in `../data/ex5/` folder.
+
+### Exp#6 - Figure 15 (~2 hours)
+
+1. Do `cd scripts/`
+2. Do `sudo python3 ex6_fig15.py`
+3. After the experiment is finished, this will generate `ex6_fig15.png` in `output/` folder, and the resulting data is in `../data/ex6/` folder.
 
 
 

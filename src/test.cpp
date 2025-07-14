@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 		numData = atoi(argv[2]); // data大小
 		numThreads = atoi(argv[3]);
 	}
-	const size_t initialSize = 16384; // 256  //500W不分裂采用2048 5000W用8192
+	const size_t initialSize = 256; // 256  //500W不分裂采用2048 5000W用8192
 	;								// 1024*16/256*4;
 	struct timespec start, end;
 	uint64_t elapsed;
